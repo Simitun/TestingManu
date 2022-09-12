@@ -37,7 +37,7 @@ NoStrokeSample = NoStroke.sample(n = 50)
 
 # '''For Checkbox'''
 CheckData = st.sidebar.checkbox('Brain Stroke Data')
-CheckMetrics = st.sidebar.checkbox('Predict Test')
+#CheckMetrics = st.sidebar.checkbox('Predict Test')
 
 if CheckData:
     st.write(Brain)
