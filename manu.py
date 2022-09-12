@@ -1,8 +1,4 @@
 import streamlit as st
-#st.title('Brain Stroke Prevention')
-
-
-import streamlit as st
 import pandas as pd
 import numpy as np
 import sklearn
@@ -28,7 +24,7 @@ st.title('Brain Stroke Prediction')
 # st.text('The index number "1" express "Not Brain Stroke".')
 
 Brain = pd.read_csv('healthcare-dataset-stroke-data.csv')
-classifier = st.sidebar.selectbox('Choose model classifier', ('Logistic Regression', 'Naive Bayes', 'K-Nearest Neighbors', 'Support Vector Machine', 'Decision Tree Classifier', 'Random Forest Classifier', 'XGB Classifier'))
+classifier = st.sidebar.selectbox('Choose model classifier', ('Logistic Regression', 'Naive Bayes', 'K-Nearest Neighbors', 'Support Vector Machine', 'Decision Tree Classifier', 'Random Forest Classifier'))
 
 Brain.dropna(inplace = True)
 
@@ -41,7 +37,7 @@ NoStrokeSample = NoStroke.sample(n = 50)
 
 # '''For Checkbox'''
 CheckData = st.sidebar.checkbox('Brain Stroke Data')
-CheckMetrics = st.sidebar.checkbox('Predict Test')
+#CheckMetrics = st.sidebar.checkbox('Predict Test')
 
 if CheckData:
     st.write(Brain)
