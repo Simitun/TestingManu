@@ -33,8 +33,8 @@ classifier = st.sidebar.selectbox('Choose model classifier', ('Logistic Regressi
 Brain.dropna(inplace = True)
 
 # '''Under Sampling'''
-Stroke = Brain[Brain.stroke == 0]
-NoStroke = Brain[Brain.stroke == 1]
+NoStroke = Brain[Brain.stroke == 0]
+Stroke = Brain[Brain.stroke == 1]
 NoStrokeSample = NoStroke.sample(n = 50)
 Brain = pd.concat([NoStrokeSample, Stroke], axis = 0)
 NoStrokeSample = NoStroke.sample(n = 50)
